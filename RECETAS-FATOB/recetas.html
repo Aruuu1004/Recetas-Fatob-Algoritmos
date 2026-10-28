@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Recetas - RECETAS FATOB</title>
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/tienda.css">
+    <link rel="icon" href="img/favicon.jpg">
+</head>
+<body>
+    <div id="nav"></div>
+
+    <main class="container">
+        <div class="listado-cab">
+            <h2 id="tituloListado">Todas las recetas</h2>
+            <div class="busca">
+                <form class="busca-form" id="formBusca" role="search">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M15.5 15.5L21 21" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+                    <input type="search" id="buscaInput" placeholder="Buscar recetas o ingredientes..." aria-label="Buscar recetas">
+                    <button type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+        <p class="msg ok" id="msgOk" style="display:none">Receta eliminada correctamente.</p>
+        <div id="listado"></div>
+    </main>
+
+    <div id="pie"></div>
+
+    <script src="js/datos.js"></script>
+    <script data-src="js/componentes.js"></script>
+    <script data-src="js/navbar.js"></script>
+    <script data-src="js/backtotop.js"></script>
+    <script data-src="js/recetas.js"></script>
+</body>
+</html>

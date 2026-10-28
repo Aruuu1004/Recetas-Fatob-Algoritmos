@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registrarse - RECETAS FATOB</title>
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/tienda.css">
+    <link rel="icon" href="img/favicon.jpg">
+</head>
+<body>
+    <div id="nav"></div>
+
+    <main class="auth">
+        <section class="auth-card">
+            <h1>Creá tu cuenta y empezá a cocinar</h1>
+            <div id="aviso"></div>
+            <form class="auth-form" id="formRegistro" novalidate>
+                <div class="campo"><input type="text" id="nombre" placeholder="Nombre de usuario" aria-label="Nombre de usuario" maxlength="100" required></div>
+                <div class="campo"><input type="email" id="email" placeholder="Correo Electrónico" aria-label="Correo electrónico" autocomplete="email" required></div>
+                <div class="campo"><input type="password" id="contrasena" placeholder="Contraseña" aria-label="Contraseña" autocomplete="new-password" required></div>
+                <div class="campo"><input type="password" id="verificar" placeholder="Verificar contraseña" aria-label="Verificar contraseña" autocomplete="new-password" required></div>
+                <label class="check"><input type="checkbox" data-mostrar="contrasena,verificar"> Mostrar contraseña</label>
+                <button type="submit" class="btn">Registrarse</button>
+            </form>
+            <p class="auth-pie">¿Ya tenés cuenta? <a href="login.html">Iniciá sesión</a></p>
+        </section>
+    </main>
+
+    <div id="pie"></div>
+
+    <script src="js/datos.js"></script>
+    <script data-src="js/componentes.js"></script>
+    <script data-src="js/navbar.js"></script>
+    <script data-src="js/backtotop.js"></script>
+    <script data-src="js/auth.js"></script>
+    <script data-src="js/cuenta.js"></script>
+</body>
+</html>

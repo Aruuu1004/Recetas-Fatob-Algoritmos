@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pago con tarjeta - RECETAS FATOB</title>
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/tienda.css">
+    <link rel="icon" href="img/favicon.jpg">
+</head>
+<body>
+    <div id="nav"></div>
+
+    <main class="container">
+        <section class="pago">
+            <h1>💳 Tarjeta de crédito o débito</h1>
+            <p class="sub">Completá los datos de tu tarjeta para continuar</p>
+            <form class="form-pago" id="formTarjeta" novalidate>
+                <label for="numero">Número de tarjeta</label>
+                <input type="text" id="numero" inputmode="numeric" placeholder="Ej: 1234 5678 9012 3456" maxlength="19">
+                <p class="error-campo" id="e-numero"></p>
+                <label for="titular">Nombre y apellido (como figura en la tarjeta)</label>
+                <input type="text" id="titular" placeholder="Ej: Oscar Mayta">
+                <p class="error-campo" id="e-titular"></p>
+                <div class="dos">
+                    <div><label for="cvv">Código de seguridad (CVV)</label><input type="text" id="cvv" inputmode="numeric" placeholder="Ej: 676" maxlength="4"><p class="error-campo" id="e-cvv"></p></div>
+                    <div><label for="venc">MM/AA</label><input type="text" id="venc" placeholder="Ej: 6/27" maxlength="5"><p class="error-campo" id="e-venc"></p></div>
+                </div>
+                <label for="dni">DNI (opcional)</label>
+                <input type="text" id="dni" inputmode="numeric" placeholder="Ej: 50329846" maxlength="9">
+                <p class="error-campo" id="e-dni"></p>
+            </form>
+            <button type="submit" form="formTarjeta" class="btn-grande" id="btnPagar">PAGAR</button>
+        </section>
+    </main>
+
+    <div id="pie"></div>
+
+    <script src="js/datos.js"></script>
+    <script data-src="js/componentes.js"></script>
+    <script data-src="js/navbar.js"></script>
+    <script data-src="js/backtotop.js"></script>
+    <script data-src="js/pago.js"></script>
+</body>
+</html>

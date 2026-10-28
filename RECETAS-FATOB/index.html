@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inicio - RECETAS FATOB</title>
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/tienda.css">
+    <link rel="icon" href="img/favicon.jpg">
+    <link rel="stylesheet" href="src/fuentes.css">
+</head>
+<body>
+    <div id="nav"></div>
+
+    <main class="container">
+        <section class="saludo">
+            <div class="saludo-texto">
+                <h1 id="saludo">¡Hola!</h1>
+                <p>Descubrí, cociná y disfrutá la vida con las mejores recetas.</p>
+                <div class="busca">
+                    <form class="busca-form" id="formBusca" role="search">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M15.5 15.5L21 21" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+                        <input type="search" id="buscaInput" placeholder="Buscar recetas, ingredientes o categorías..." aria-label="Buscar">
+                        <button type="submit">Buscar</button>
+                    </form>
+                    <div class="busca-modo" role="group" aria-label="Qué querés buscar">
+                        <button type="button" data-modo="recetas" aria-pressed="true">Recetas</button>
+                        <button type="button" data-modo="cocineros" aria-pressed="false">Cocineros</button>
+                    </div>
+                    <div id="buscaResultados" aria-live="polite"></div>
+                </div>
+            </div>
+            <div class="saludo-foto" id="fotoHero"></div>
+        </section>
+
+        <h2 class="sec-titulo">Recetas del día</h2>
+        <div class="grid" id="recetasDia" style="margin-bottom:34px"></div>
+
+        <h2 class="sec-titulo">Categorías</h2>
+        <div class="categorias" id="categorias"></div>
+
+        <h2 class="sec-titulo">Las más valoradas</h2>
+        <div class="carousel rank">
+            <div class="carousel-track" id="masValoradas"></div>
+            <button type="button" class="carousel-btn carousel-prev" aria-label="Anteriores">&#8249;</button>
+            <button type="button" class="carousel-btn carousel-next" aria-label="Siguientes">&#8250;</button>
+        </div>
+    </main>
+
+    <div id="pie"></div>
+
+    <script src="js/datos.js"></script>
+    <script data-src="js/componentes.js"></script>
+    <script data-src="js/navbar.js"></script>
+    <script data-src="js/backtotop.js"></script>
+    <script data-src="js/carousel.js"></script>
+    <script data-src="js/inicio.js"></script>
+</body>
+</html>

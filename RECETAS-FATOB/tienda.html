@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Utensilios - RECETAS FATOB</title>
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/tienda.css">
+    <link rel="icon" href="img/favicon.jpg">
+</head>
+<body>
+    <div id="nav"></div>
+
+    <main class="container container-ancho">
+        <h2>Utensilios de cocina</h2>
+        <div class="tienda">
+            <section class="prod-grid" id="productos" aria-label="Productos"></section>
+            <aside class="carrito" aria-label="Tu carrito">
+                <h2>🛒 Tu carrito</h2>
+                <div class="carrito-cab"><span id="carritoCuenta">0 productos</span><button type="button" id="btnVaciar">🗑 Vaciar todo</button></div>
+                <div class="carrito-lista" id="carritoLista"></div>
+                <form class="cupon" id="formCupon"><input type="text" id="cuponInput" placeholder="Ingresá tu cupón" aria-label="Cupón de descuento"><button type="submit" class="btn-chico">Aplicar</button></form>
+                <p class="cupon-msg" id="cuponMsg"></p>
+                <div class="resumen">
+                    <strong>Resumen de compra</strong>
+                    <div><span id="resCuenta">Subtotal</span><span id="resSubtotal">$0</span></div>
+                    <div id="filaDesc" style="display:none"><span id="resDescTxt">Descuento</span><span id="resDesc"></span></div>
+                    <div class="total"><span>Total</span><span id="resTotal">$0</span></div>
+                </div>
+                <button type="button" class="btn-grande continuar" id="btnContinuar" style="width:100%;margin-top:10px;padding:11px">Continuar con la compra →</button>
+            </aside>
+        </div>
+    </main>
+
+    <div id="pie"></div>
+
+    <script src="js/datos.js"></script>
+    <script data-src="js/componentes.js"></script>
+    <script data-src="js/navbar.js"></script>
+    <script data-src="js/backtotop.js"></script>
+    <script data-src="js/tienda.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Método de pago - RECETAS FATOB</title>
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/tienda.css">
+    <link rel="icon" href="img/favicon.jpg">
+</head>
+<body>
+    <div id="nav"></div>
+
+    <main class="container">
+        <section class="pago">
+            <h1>💳 Método de Pago</h1>
+            <p class="sub">Elegí cómo querés pagar tu pedido</p>
+            <label class="pago-opcion tarjeta"><input type="radio" name="metodo" value="tarjeta" checked>
+                <span class="ico-pago">💳</span><span><strong>Tarjeta de crédito o débito</strong><span class="d">Pagá de forma segura con tu tarjeta</span></span></label>
+            <label class="pago-opcion mp"><input type="radio" name="metodo" value="mercadopago">
+                <span class="ico-pago">🤝</span><span><strong>Mercado Pago</strong><span class="d">Pagá con tu cuenta de Mercado Pago</span></span></label>
+            <p class="error-campo" id="aviso"></p>
+            <button type="button" class="btn-grande" id="btnContinuar">Continuar</button>
+        </section>
+    </main>
+
+    <div id="pie"></div>
+
+    <script src="js/datos.js"></script>
+    <script data-src="js/componentes.js"></script>
+    <script data-src="js/navbar.js"></script>
+    <script data-src="js/backtotop.js"></script>
+    <script data-src="js/pago.js"></script>
+</body>
+</html>

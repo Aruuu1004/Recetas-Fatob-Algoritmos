@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gestión de usuarios - RECETAS FATOB</title>
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/tienda.css">
+    <link rel="icon" href="img/favicon.jpg">
+</head>
+<body>
+    <div id="nav"></div>
+
+    <main class="container">
+        <div class="admin-encabezado"><h2>Gestión de usuarios</h2><a class="boton" href="registro.html">+ Agregar usuario</a></div>
+        <p class="msg ok" id="msgOk" style="display:none"></p>
+        <p class="msg error" id="msgError" style="display:none"></p>
+        <div class="tabla-scroll"><table class="tabla-admin">
+            <thead><tr><th>ID</th><th>Nombre</th><th>Email</th><th>Rol</th><th>Registro</th><th>Acciones</th></tr></thead>
+            <tbody id="filas"></tbody>
+        </table></div>
+    </main>
+
+    <div id="pie"></div>
+
+    <script src="js/datos.js"></script>
+    <script data-src="js/componentes.js"></script>
+    <script data-src="js/navbar.js"></script>
+    <script data-src="js/backtotop.js"></script>
+    <script data-src="js/admin_usuarios.js"></script>
+</body>
+</html>

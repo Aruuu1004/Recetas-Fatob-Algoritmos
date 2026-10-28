@@ -1,0 +1,115 @@
+
+.nav-carrito { position: relative; display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; background: var(--vino-osc); }
+.nav-carrito svg { width: 21px; height: 21px; }
+.nav-carrito:hover { background: rgba(255, 230, 211, .2); }
+.nav-carrito-n { position: absolute; top: -4px; right: -4px; min-width: 18px; height: 18px; padding: 0 4px; border-radius: 9px; background: #c9a227; color: #fff; font: 700 .7rem var(--f-ui); display: none; align-items: center; justify-content: center; }
+.solo-movil { display: none; }
+
+.btn-chico { background: var(--vino); color: var(--crema); border: 0; border-radius: 20px; padding: 6px 14px; font: 600 .8rem var(--f-ui); font-style: normal; cursor: pointer; }
+.btn-chico:hover { background: var(--vino-osc); }
+.btn-chico.claro { background: var(--rosa); color: var(--vino); }
+.cant { display: inline-flex; align-items: center; gap: 4px; }
+.cant button { width: 24px; height: 24px; border-radius: 50%; border: 1px solid var(--vino); background: transparent; color: var(--vino); cursor: pointer; font: 700 .9rem var(--f-ui); line-height: 1; padding: 0; }
+.cant button:hover { background: var(--vino); color: var(--crema); }
+.cant span { min-width: 22px; text-align: center; font: 600 .85rem var(--f-ui); }
+
+.tienda { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 20px; align-items: start; }
+.prod-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.prod { background: var(--rosa-claro); border-radius: var(--radio-card); padding: 10px; box-shadow: var(--sombra); display: flex; flex-direction: column; gap: 4px; }
+.prod-img { background: #fff; border-radius: 12px; height: 120px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.prod-img img { width: 100%; height: 100%; object-fit: contain; }
+.prod-emoji { font-size: 3.4rem; line-height: 1; }
+.prod h3 { font-size: 1rem; margin: 6px 0 0; }
+.prod h3 a { color: var(--vino); }
+.prod p { margin: 0; font-size: .75rem; color: var(--texto-suave); line-height: 1.3; flex: 1; }
+.prod-precio { font: 700 1.05rem var(--f-ui); color: var(--vino-osc); }
+.prod-fila { display: flex; justify-content: space-between; align-items: center; gap: 6px; }
+
+.carrito { background: var(--rosa-osc); border-radius: var(--radio-panel); padding: 16px; box-shadow: var(--sombra); position: sticky; top: 80px; }
+.carrito h2 { text-align: left; font-size: 1.2rem; margin: 0 0 8px; font-style: normal; }
+.carrito-cab { display: flex; justify-content: space-between; align-items: center; font: .8rem var(--f-ui); margin-bottom: 8px; }
+.carrito-cab button { background: none; border: 0; color: var(--vino); text-decoration: underline; cursor: pointer; font: .8rem var(--f-ui); }
+.carrito-lista { display: flex; flex-direction: column; gap: 8px; max-height: 330px; overflow-y: auto; }
+.carrito-item { display: grid; grid-template-columns: 44px 1fr auto; gap: 8px; align-items: center; background: var(--rosa-claro); border-radius: 12px; padding: 6px 8px; }
+.carrito-item .mini-img { width: 44px; height: 44px; background: #fff; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; overflow: hidden; }
+.carrito-item .mini-img img { width: 100%; height: 100%; object-fit: contain; }
+.carrito-item strong { font: 600 .85rem var(--f-ui); display: block; }
+.carrito-item small { font: .75rem var(--f-ui); color: var(--texto-suave); }
+.carrito-item .borrar { background: none; border: 0; cursor: pointer; font-size: 1rem; color: var(--vino); }
+.carrito-vacio { text-align: center; font: .9rem var(--f-ui); padding: 18px 6px; }
+.cupon { display: flex; gap: 6px; margin: 12px 0 6px; }
+.cupon input { flex: 1; min-width: 0; border: 0; border-radius: 20px; padding: 8px 12px; font: .8rem var(--f-ui); background: var(--rosa-claro); }
+.cupon-msg { font: .75rem var(--f-ui); min-height: 1em; margin: 0 0 8px 4px; }
+.resumen { background: var(--rosa-claro); border-radius: 12px; padding: 12px; font: .85rem var(--f-ui); }
+.resumen div { display: flex; justify-content: space-between; margin-bottom: 4px; }
+.resumen .total { font-weight: 700; font-size: 1.1rem; color: var(--vino-osc); }
+.carrito .boton, .carrito button.continuar { width: 100%; margin-top: 10px; text-align: center; }
+
+.producto { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) 260px; gap: 20px; background: var(--blanco); border-radius: var(--radio-panel); padding: 22px; box-shadow: var(--sombra); }
+.producto-foto { background: #fff; border-radius: 14px; min-height: 280px; display: flex; align-items: center; justify-content: center; }
+.producto-foto .prod-emoji { font-size: 8rem; }
+.producto-foto img { max-width: 100%; max-height: 320px; }
+.producto h1 { font-size: 1.8rem; margin: 0 0 4px; }
+.producto .precio-grande { font: 700 1.9rem var(--f-ui); color: var(--vino-osc); margin: 8px 0; }
+.producto ul { padding-left: 18px; margin: 4px 0 10px; font-size: .9rem; }
+.compra-caja { background: var(--rosa-claro); border-radius: 14px; padding: 16px; display: flex; flex-direction: column; gap: 10px; align-self: start; }
+.compra-caja .boton, .compra-caja button { width: 100%; text-align: center; }
+.stock { color: #2f5a22; font: 700 .9rem var(--f-ui); }
+.ficha { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 20px; }
+.ficha > section { background: var(--blanco); border-radius: var(--radio-card); padding: 18px; box-shadow: var(--sombra); }
+.ficha h3 { margin-top: 0; font-size: 1.2rem; }
+.ficha table { width: 100%; border-collapse: collapse; font-size: .9rem; }
+.ficha td { padding: 7px 10px; } .ficha tr:nth-child(odd) { background: var(--rosa-claro); }
+.ficha td:first-child { font-weight: 600; width: 40%; }
+.migas { font: .8rem var(--f-ui); margin-bottom: 12px; }
+
+.pago { max-width: 760px; margin: 0 auto; text-align: center; }
+.pago h1, .pago h2 { font-size: 2.2rem; margin: 0 0 4px; }
+.pago .sub { margin: 0 0 22px; color: var(--texto-suave); }
+.pago-opcion { display: flex; align-items: center; gap: 16px; text-align: left; border-radius: 22px; padding: 22px 26px; margin-bottom: 20px; cursor: pointer; border: 3px solid transparent; }
+.pago-opcion.tarjeta { background: var(--vino); color: var(--crema); }
+.pago-opcion.mp { background: var(--rosa-osc); color: var(--vino-osc); }
+.pago-opcion input { width: 20px; height: 20px; accent-color: var(--crema); flex: none; }
+.pago-opcion:has(input:checked) { border-color: var(--crema); box-shadow: 0 0 0 3px var(--vino); }
+.pago-opcion .ico-pago { font-size: 2.4rem; flex: none; }
+.pago-opcion strong { display: block; font: 700 1.2rem var(--f-titulo); }
+.pago-opcion span.d { font: .9rem var(--f-ui); }
+.btn-grande { display: inline-block; background: var(--vino); color: var(--crema); border: 0; border-radius: 30px; padding: 13px 52px; font: 700 1rem var(--f-ui); cursor: pointer; }
+.btn-grande:hover { background: var(--vino-osc); text-decoration: none; }
+.form-pago { background: var(--rosa-osc); border-radius: 22px; padding: 26px; text-align: left; margin-bottom: 20px; }
+.form-pago label { display: block; font: 600 .9rem var(--f-ui); color: var(--vino-osc); margin: 10px 0 4px; }
+.form-pago input { width: 100%; border: 0; border-radius: 8px; padding: 11px 12px; background: var(--rosa-claro); font: .9rem var(--f-ui); }
+.form-pago .dos { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.error-campo { color: #8a1c1c; font: .8rem var(--f-ui); margin: 4px 0 0; min-height: 1em; }
+.caja-mp { background: var(--rosa-osc); border-radius: 22px; padding: 34px 24px; margin-bottom: 20px; }
+.caja-mp .ico-pago { font-size: 3.4rem; }
+.ok-tilde { width: 84px; height: 84px; border-radius: 50%; background: var(--vino); color: var(--crema); font-size: 3rem; display: flex; align-items: center; justify-content: center; margin: 10px auto; }
+.resumen-compra { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; background: var(--rosa-osc); border-radius: 22px; padding: 22px; margin: 22px 0; font: .95rem var(--f-ui); }
+.resumen-compra strong { display: block; font-size: 1.15rem; color: var(--vino-osc); }
+
+@media (max-width: 960px) {
+    .nav-carrito { display: none; }
+    .solo-movil { display: block; }
+    .tienda { grid-template-columns: 1fr; }
+    .carrito { position: static; order: -1; }
+    .prod-grid { grid-template-columns: repeat(3, 1fr); }
+    .producto { grid-template-columns: 1fr 1fr; }
+    .compra-caja { grid-column: 1 / -1; }
+}
+@media (max-width: 600px) {
+    .prod-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .prod-img { height: 95px; } .prod-emoji { font-size: 2.6rem; }
+    .producto { grid-template-columns: 1fr; padding: 14px; }
+    .ficha { grid-template-columns: 1fr; }
+    .pago h1, .pago h2 { font-size: 1.7rem; }
+    .pago-opcion { padding: 16px; } .pago-opcion .ico-pago { font-size: 1.8rem; }
+    .form-pago { padding: 16px; } .form-pago .dos { grid-template-columns: 1fr; }
+    .resumen-compra { grid-template-columns: 1fr; text-align: center; }
+}
+
+.sin-imagen { display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; font-size: 3.2rem; }
+.portada-img.sin-imagen { font-size: 7rem; }
+.saludo-foto .sin-imagen { font-size: 6rem; }
+@media (max-width: 600px) { .portada-img.sin-imagen { font-size: 4.5rem; } }
+.prod-img img { padding: 8px; }
+.producto-foto img { width: 100%; max-width: 360px; height: auto; }

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nueva receta - RECETAS FATOB</title>
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/tienda.css">
+    <link rel="icon" href="img/favicon.jpg">
+</head>
+<body>
+    <div id="nav"></div>
+
+    <main class="container">
+        <h2 id="tituloForm">Nueva receta</h2>
+        <p class="msg error" id="msgError" style="display:none"></p>
+        <form class="formulario" id="formReceta">
+            <label for="titulo">Título</label>
+            <input type="text" id="titulo" maxlength="150" required>
+            <label for="categoria">Categoría</label>
+            <select id="categoria" required></select>
+            <label for="descripcion">Descripción breve</label>
+            <textarea id="descripcion" maxlength="500" rows="3" required></textarea>
+            <label for="ingredientes">Ingredientes (uno por línea)</label>
+            <textarea id="ingredientes" rows="6" required></textarea>
+            <label for="pasos">Preparación (un paso por línea; podés escribir "Título: texto")</label>
+            <textarea id="pasos" rows="8" required></textarea>
+            <label for="tiempo">Tiempo de preparación (minutos)</label>
+            <input type="number" id="tiempo" min="1" required>
+            <label for="foto">Foto (opcional)</label>
+            <input type="file" id="foto" accept="image/*">
+            <small class="ayuda">JPG, PNG o WEBP. Se achica automáticamente para guardarla en el navegador.</small>
+            <button type="submit" id="btnGuardar">Publicar receta</button>
+        </form>
+    </main>
+
+    <div id="pie"></div>
+
+    <script src="js/datos.js"></script>
+    <script data-src="js/componentes.js"></script>
+    <script data-src="js/navbar.js"></script>
+    <script data-src="js/backtotop.js"></script>
+    <script data-src="js/receta_form.js"></script>
+</body>
+</html>
