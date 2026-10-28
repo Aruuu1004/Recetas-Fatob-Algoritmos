@@ -1,0 +1,131 @@
+.escenaScrollTotal {
+  position: relative;
+  height: 2200px;
+  background-color: #f3e2d2;
+}
+
+.seccionScroll {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.imagenEfectoScroll {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/ImagenesRecetasComputadora/FideosCrema.jpg);
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  transform-origin: center center;
+  animation: encogerYRotarConScroll linear both;
+  animation-timeline: scroll(root);
+  animation-range: 0px 1400px;
+}
+
+.capaOscuraScroll {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+  transform-origin: center center;
+  animation: encogerYRotarConScroll linear both;
+  animation-timeline: scroll(root);
+  animation-range: 0px 1400px;
+}
+
+.contenidoScroll {
+  position: relative;
+  z-index: 3;
+  color: #F5F2EA;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+
+.tituloScroll {
+  font-family: "Modern Antiqua", serif;
+  color: #fff5d8;
+  font-size: 96px;
+  margin: 0;
+  margin-top: 240px;
+  text-align: center;
+  letter-spacing: 4px;
+  text-shadow: 2px 4px 10px rgba(93, 40, 10, 0.7);
+}
+
+
+.fraseScroll1 {
+  font-family: "Oregano", serif;
+  font-size: 28px;
+  font-style: italic;
+  color: #fff5d8;
+  text-align: right;
+  margin-top: 140px;
+  margin-bottom: 0;
+  margin-left: auto;
+  max-width: 600px;
+  animation: aparecerFraseConScroll linear both;
+  animation-timeline: scroll(root);
+  animation-range: 200px 600px;
+}
+
+
+.fraseScroll2 {
+  font-family: "Oregano", serif;
+  font-style: italic;
+  font-size: 20px;
+  color: #fff5d8;
+  text-align: left;
+  margin-top: 60px;
+  margin-bottom: 0;
+  margin-right: auto;
+  max-width: 500px;
+  animation: aparecerFraseConScroll linear both;
+  animation-timeline: scroll(root);
+  animation-range: 600px 1000px;
+}
+
+.restoDeLaPagina {
+  position: relative;
+  z-index: 10;
+  background-color: #F5F2EA;
+  padding: 80px 40px;
+  box-sizing: border-box;
+}
+
+
+
+
+@keyframes encogerYRotarConScroll {
+  to {
+    transform: scale(0.55) rotate(12deg);
+    border-radius: 32px;
+  }
+}
+
+@keyframes aparecerFraseConScroll {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
