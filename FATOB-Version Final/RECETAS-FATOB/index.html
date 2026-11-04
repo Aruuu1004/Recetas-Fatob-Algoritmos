@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inicio - RECETAS FATOB</title>
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/tienda.css">
+    <link rel="icon" href="img/favicon.jpg">
+    <link rel="stylesheet" href="css/fuentes.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar" id="navbar">
+            <div class="navbar-in">
+                <a class="brand" href="index.html"><img class="logo" src="img/logo.png" alt="Logo de RECETAS FATOB"><span>RECETAS FATOB</span></a>
+                <button type="button" class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="nav-menu" id="navMenu">
+                    <ul class="nav-links">
+                        <li><a class="activo" href="index.html">Inicio</a></li>
+                        <li><a href="recetas.html">Recetas</a></li>
+                        <li><a href="sobre_nosotros.html">Sobre Nosotros</a></li>
+                        <li><a href="tienda.html">Tienda</a></li>
+                        <li class="solo-movil"><a href="carrito.html">Carrito de Compras</a></li>
+                    </ul>
+                    <div class="nav-acciones">
+                        <a class="nav-carrito" href="carrito.html" aria-label="Carrito de compras">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M3 4h2.5l2.2 10.5h9.6L19.5 7H7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="9.5" cy="19" r="1.5" fill="currentColor"/>
+                                <circle cx="16.5" cy="19" r="1.5" fill="currentColor"/>
+                            </svg>
+                            <span class="nav-carrito-n" id="carritoN"></span>
+                        </a>
+                        <a class="nav-btn-link" data-sin-sesion href="registro.html">Registrarse</a>
+                        <a class="nav-btn-link" data-sin-sesion href="login.html">Iniciar Sesión</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div id="cookieBanner" role="region" aria-label="Aviso de cookies">
+            <span>Esta página utiliza cookies para mejorar tu experiencia de navegación.</span>
+            <button type="button" id="btnAceptarCookies">Aceptar</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="saludo">
+            <div class="saludo-texto">
+                <h1 id="saludo">¡Hola!</h1>
+                <p>Descubrí, cociná y disfrutá la vida con las mejores recetas.</p>
+                <div class="busca">
+                    <form class="busca-form" id="formBusca" role="search">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M15.5 15.5L21 21" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+                        <input type="search" id="buscaInput" placeholder="Buscar recetas, ingredientes o categorías..." aria-label="Buscar">
+                        <button type="submit">Buscar</button>
+                    </form>
+                    <div class="busca-modo" role="group" aria-label="Qué querés buscar">
+                        <button type="button" data-modo="recetas" aria-pressed="true">Recetas</button>
+                        <button type="button" data-modo="cocineros" aria-pressed="false">Cocineros</button>
+                    </div>
+                    <div id="buscaResultados" aria-live="polite"></div>
+                </div>
+            </div>
+            <div class="saludo-foto" id="fotoHero"></div>
+        </section>
+
+        <h2 class="sec-titulo">Recetas del día</h2>
+        <div class="grid" id="recetasDia"></div>
+
+        <h2 class="sec-titulo">Categorías</h2>
+        <div class="categorias" id="categorias"></div>
+
+        <h2 class="sec-titulo">Las más valoradas</h2>
+        <div class="carousel rank">
+            <div class="carousel-track" id="masValoradas"></div>
+            <button type="button" class="carousel-btn carousel-prev" aria-label="Anteriores">&#8249;</button>
+            <button type="button" class="carousel-btn carousel-next" aria-label="Siguientes">&#8250;</button>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-contenido">
+            <span></span>
+            <div class="footer-texto">
+                <p>¿Te interesa conocer o contactar a los creadores?</p>
+                <p><a class="footer-mail" href="mailto:estudios.ariadna@gmail.com"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                    <rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+                    <path d="M3 7l9 6 9-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                </svg> estudios.ariadna@gmail.com</a></p>
+                <p class="chico">&copy; 2026 RECETAS FATOB - Fatob Studios. Todos los derechos reservados.</p>
+            </div>
+            <div class="footer-redes">
+                <a href="https://github.com/Aruuu1004/Recetas-Fatob-Algoritmos" target="_blank" rel="noopener" aria-label="GitHub">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <button id="btn-top" title="Volver arriba" aria-label="Volver arriba">↑</button>
+
+    <script src="js/datos.js"></script>
+    <script src="js/componentes.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/backtotop.js"></script>
+    <script data-src="js/carousel.js"></script>
+    <script data-src="js/inicio.js"></script>
+</body>
+</html>
